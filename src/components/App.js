@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Loading from './Loading';
 import Tours from './Tours';
-
-const url = 'https://course-api.com/react-tours-project';
+import { tourData } from './data'; // 👈 import local data
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -11,12 +10,13 @@ function App() {
   const fetchTours = async () => {
     setLoading(true);
     try {
-      const response = await fetch(url);
-      const tours = await response.json();
-      setTours(tours);
-      setLoading(false);
+      // Simulate a fetch with a timeout
+      setTimeout(() => {
+        setTours(tourData);
+        setLoading(false);
+      }, 1000); // simulate network delay
     } catch (error) {
-      console.log(error);
+      console.error(error);
       setLoading(false);
     }
   };
@@ -30,9 +30,7 @@ function App() {
     setTours(newTours);
   };
 
-  if (loading) {
-    return <Loading />;
-  }
+  if (loading) return <Loading />;
 
   if (tours.length === 0) {
     return (
