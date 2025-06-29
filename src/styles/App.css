@@ -10,3 +10,55 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .underline {
+    width: 5rem;
+    height: 0.25rem;
+    background: #49a6e9;
+    margin: 0 auto;
+  }
+  
+  .single-tour {
+    background: #fff;
+    border-radius: 0.25rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .tour-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tour-price {
+    color: #49a6e9;
+  }
+  
+  .delete-btn,
+  .btn {
+    background: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  
